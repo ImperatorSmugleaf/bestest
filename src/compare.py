@@ -1,8 +1,11 @@
 '''
 Author: Kieran Ahn
 
-This script compares two images and identifies the
-differences between them.
+This module contains functions for use in 
+comparing two images and displaying the 
+differences between them. If called from
+the command line, will display the difference
+between two images to the user.
 '''
 from skimage.metrics import structural_similarity
 import cv2
