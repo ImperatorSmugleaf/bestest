@@ -24,7 +24,6 @@ def compare(img1, img2):
     returns: a tuple containing the two images with their differences
     highlighted in color-coded boxes.
     '''
-    print(type(img1))
     grey1 = cv2.cvtColor(img1, cv2.COLOR_BGR2GRAY)
     grey2 = cv2.cvtColor(img2, cv2.COLOR_BGR2GRAY)
 
