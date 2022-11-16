@@ -44,7 +44,7 @@ def compare(img1, img2, *, onlyBoxes=False):
     for difference_found in contours: 
         box_color = [int(np.random.choice(range(255))) for i in range(3)]
         if onlyBoxes:
-            box_color.insert(255)
+            box_color.append(255)
         (x, y, w, h) = cv2.boundingRect(difference_found)
         cv2.rectangle(img1, (x, y), (x + w, y + h), tuple(box_color), 1)
         cv2.rectangle(img2, (x, y), (x + w, y + h), tuple(box_color), 1)
