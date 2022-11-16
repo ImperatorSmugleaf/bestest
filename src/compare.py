@@ -12,9 +12,9 @@ Adapted from tutorial: https://pyimagesearch.com/2017/06/19/image-difference-wit
 from skimage.metrics import structural_similarity
 import cv2
 import imutils
-from numpy.random import choice as randomInt
+import numpy as np
 
-def compare(img1, img2):
+def compare(img1, img2, *, onlyBoxes=False):
     '''
     Takes in two images and labels the differences between them.
 
@@ -34,11 +34,20 @@ def compare(img1, img2):
 
     contours = imutils.grab_contours(cv2.findContours(threshold, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE))
 
+    if onlyBoxes:
+        alpha1 = np.zeros((img1.shape[0], img2.shape[1], 1), np.uint8)
+        img1 = np.dstack((img1, alpha1))
+
+        alpha2 = np.zeros((img2.shape[0], img2.shape[1], 1), np.uint8)
+        img2 = np.dstack((img2, alpha2))
+
     for difference_found in contours: 
-        box_color = [int(randomInt(range(255))) for i in range(3)]
+        box_color = [int(np.random.choice(range(255))) for i in range(3)]
+        if onlyBoxes:
+            box_color.insert(255)
         (x, y, w, h) = cv2.boundingRect(difference_found)
-        cv2.rectangle(img1, (x, y), (x + w, y + h), (box_color[0], box_color[1], box_color[2]), 1)
-        cv2.rectangle(img2, (x, y), (x + w, y + h), (box_color[0], box_color[1], box_color[2]), 1)
+        cv2.rectangle(img1, (x, y), (x + w, y + h), tuple(box_color), 1)
+        cv2.rectangle(img2, (x, y), (x + w, y + h), tuple(box_color), 1)
     
     return (img1, img2)
 
