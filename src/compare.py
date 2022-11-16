@@ -20,6 +20,8 @@ def compare(img1, img2, *, onlyBoxes=False):
 
     :img1: an image represented as a numpy array
     :img2: an image represented as a numpy array
+    :onlyBoxes: if true, returns images that only display the
+    boxes containing the identified differences
 
     returns: a tuple containing the two images with their differences
     highlighted in color-coded boxes.
