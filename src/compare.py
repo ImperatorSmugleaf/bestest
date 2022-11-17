@@ -32,7 +32,8 @@ def compare(img1, img2, *, onlyBoxes=False):
     difference = structural_similarity(grey1, grey2, full=True)[1]
     difference = (difference * 255).astype("uint8")
 
-    threshold = cv2.threshold(difference, 0, 255, cv2.THRESH_BINARY_INV | cv2.THRESH_OTSU)[1]
+    blur = cv2.GaussianBlur(difference, (9, 9), 0)
+    threshold = cv2.threshold(blur, 0, 255, cv2.THRESH_BINARY_INV | cv2.THRESH_OTSU)[1]
 
     contours = imutils.grab_contours(cv2.findContours(threshold, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE))
 
