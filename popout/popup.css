@@ -42,10 +42,12 @@
 
 h1 {
   font-family: 'Lobster', cursive;
+  font-size: 30px;
 }
 
 p {
   font-family: 'Inter', sans-serif; 
+  font-size: 15px;
 }
 
 .extension {
