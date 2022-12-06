@@ -35,6 +35,8 @@ def compare(img1, img2, *, onlyBoxes=False):
     blur = cv2.GaussianBlur(difference, (9, 9), 0)
     threshold = cv2.threshold(blur, 0, 255, cv2.THRESH_BINARY_INV | cv2.THRESH_OTSU)[1]
 
+    threshold = cv2.GaussianBlur(threshold, (7, 7), 0)
+
     contours = imutils.grab_contours(cv2.findContours(threshold, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE))
 
     if onlyBoxes:
@@ -53,6 +55,9 @@ def compare(img1, img2, *, onlyBoxes=False):
         cv2.rectangle(img2, (x, y), (x + w, y + h), tuple(box_color), 1)
     
     return (img1, img2)
+
+def sample():
+    return "Hello"
 
 
 if __name__ == '__main__':

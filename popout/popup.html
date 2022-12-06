@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div style="width: 300px; height: 550px;" className="Extension">
+        <div style="display: flex; align-items: center; flex-direction: column;" className="extension">
+          <h1>Bestest</h1>
+          <p>
+            Choose a mockup against which you would like to compare your webapp.
+            Bestest will compare the image against the page from which this
+            browser extension was launched.
+          </p>
+          <div style="align-items: center; width: 250px; height: 250px; border: 1px dotted black; justify-content: space-around;" className="rectangle">
+            <img id="icon" src="./img/imageupload.png" alt="Image upload symbol" width="100" height="100">
+            <input type="file" />
+          </div>
+        </div>
+      </div>
+    <button id="generateComparisonButton">Generate Comparison</button>
+    <script src="popup.js"></script>
+    <script src="extension.js"></script>
+
+    <script>
+        window.onload = function(){
+            document.getElementById('icon').src = chrome.extension.getURL('logo.png');
+        };
+    </script>
+
+</body>
+</html>
