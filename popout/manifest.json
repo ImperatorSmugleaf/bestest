@@ -6,7 +6,8 @@
         "newtab": "index.html"
     },
     "permissions": [
-        "tabs"
+        "tabs",
+        "activeTab"
     ],
     "browser_action": {
         "default_title": "bestest",
@@ -26,6 +27,9 @@
     "icons": {
         "16": "./img/logo.png"
     },
+    "host_permissions": [
+        "activeTab"
+      ],
     "web_accessible_resources": ["./img/imageupload.png", "img/imageupload.png", "imageupload.png"],
     "content_security_policy":"script-src 'self' https://apis.google.com; object-src 'self'"
 }
