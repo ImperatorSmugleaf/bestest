@@ -1,5 +1,4 @@
 /* global chrome */
-
 let generateComparisonButton = document.getElementById(
   "generateComparisonButton"
 );
@@ -16,8 +15,8 @@ function generateComparison() {
     // chrome.extension.getBackgroundPage().console.log(dataUrl);
     imageURL = dataUrl;
     chrome.tabs.create({
-      //   url: "index.html",
-      url: dataUrl,
+      url: "index.html",
+      //  url: dataUrl,
     });
 
     //

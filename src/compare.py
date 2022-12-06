@@ -55,6 +55,9 @@ def compare(img1, img2, *, onlyBoxes=False):
     
     return (img1, img2)
 
+def sample():
+    return "Hello"
+
 
 if __name__ == '__main__':
     import sys
