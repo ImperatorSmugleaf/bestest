@@ -34,6 +34,8 @@ def compare(img1, img2, *, onlyBoxes=False):
 
     threshold = cv2.threshold(difference, 0, 255, cv2.THRESH_BINARY_INV | cv2.THRESH_OTSU)[1]
 
+    threshold = cv2.GaussianBlur(threshold, (7, 7), 0)
+
     contours = imutils.grab_contours(cv2.findContours(threshold, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE))
 
     if onlyBoxes:
