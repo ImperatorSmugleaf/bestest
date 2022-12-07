@@ -1,3 +1,25 @@
 h3 {
     text-align: center;
 }
+.header {
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+    color: black;
+    filter: brightness(65%);
+}
+.body {
+    display: flex;
+    align-items: center; 
+    flex-direction: column; 
+    background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+}
+.comparison {
+    height: 80%; 
+    width: 80%;
+    transition: .25s all ease-in-out;
+}
+.comparison:hover {
+    transform: scale(1.2)
+}
