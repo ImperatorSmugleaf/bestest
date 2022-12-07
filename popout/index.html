@@ -3,16 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <title>Comparison Results</title>
-    <link rel="stylesheet" href="popup.css">
+    <link rel="stylesheet" href="index.css">
   </head>
   <body>
     
     <!-- your html code -->
     <div style="display: flex; align-items: center; flex-direction: column;">
-      <div style="width: 100%; background-color: black;">
-        <h1 style = "font-size: 50px; color: white; text-align: center;">Comparison Results</h1>
+      <div>
+        <h1 style = "font-size: 50px; text-align: center;">Comparison Results</h1>
       </div>
-      <p>Index Page</p>
+      <!-- <p>Index Page</p> -->
+      <div style="display: flex; flex-direction: row;" class="toCompare">
+        <div style="flex-direction: column;" class="developer">
+          <h3>Webapp</h3>
+          <img style= "height: 80%; width: 80%;"src="./img/developer.jpeg"/>
+        </div>
+        <div style="flex-direction: column;"class="designer">
+          <h3>Uploaded Mockup</h3>
+          <img style= "height: 80%; width: 80%;"src="./img/designer.jpeg"/>
+        </div>
+      </div>
+      <h3>skimage Comparison Results</h3>
+
+      <img style= "height: 80%; width: 80%;" class="comparison" src="./img/comparison.png"/>
+
+
     </div>
     <!-- <script src="./index.js"></script> index.js contains the main logic -->
   </body>

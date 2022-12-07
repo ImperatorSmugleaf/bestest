@@ -16,7 +16,7 @@ function generateComparison() {
     imageURL = dataUrl;
     chrome.tabs.create({
       url: "index.html",
-      //  url: dataUrl,
+      //url: dataUrl,
     });
 
     //
