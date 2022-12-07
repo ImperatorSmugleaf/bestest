@@ -7,30 +7,34 @@
     <link rel="stylesheet" href="index.css">
   </head>
   <body>
-    
-    <!-- your html code -->
+    <div >
     <section class="header">
-      <h1 style = "font-size: 25px; text-align: center;">Bestest Comparison Results</h1>
-      <img style= "height: 50px; width: 50px;" src="./img/logo.png">
+      <img style= "height: 100px; width: 100px; border-radius: 20px;" src="./img/logo.png">
+      <h1 style ="font-size: 25px; text-align: center;"> Bestest UI Test Results </h1>
     </section>
-    <div class="body" >
+    <div class="bodyContent" style="padding: 2%; margin-left: 5%; margin-right: 5%; margin-bottom: 5%; background-color: rgba(255, 255, 255, 0.3); border-radius: 20px;" >
       <!-- <p>Index Page</p> -->
       <div style="display: flex; flex-direction: row;" class="toCompare">
-        <div style="flex-direction: column;" class="developer">
+        <div style="flex-direction: column; align-items: center;" class="developer">
           <h2>Webapp</h2>
+          <p style="text-align: center">The webpage from which the Bestest Comparison was launched.</p>
           <img style= "padding-left:10%; height: 80%; width: 80%;"src="./img/developer.jpeg"/>
         </div>
         <div style="flex-direction: column;"class="designer" >
           <h2>Uploaded Mockup</h2>
+          <p style="text-align: center">Designer mockup/user uploaded image.</p>
           <img style= "padding-left:10%; height: 80%; width: 80%;"src="./img/designer.jpeg"/>
         </div>
       </div>
+      <div style="height: 80px;"></div>
       <div style="display: flex; align-items: center; flex-direction: column;">
         <h2>skimage Comparison Results</h2>
+        <p style="width: 70%">Bestest uses scikit-image, a collection of algorithms for image processing, to compare your webapp against your designer's mockup. Learn more about scikit-image <a href="https://scikit-image.org/" target="_blank" rel="noopener noreferrer">here.</a></p>
 
         <img class="comparison" src="./img/comparison.png"/>
-        <h4>Feedback</h4>
       </div>
+      <div style="height: 100px;"></div>
+    </div>
 
 
 
